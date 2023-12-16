@@ -1,0 +1,115 @@
+:root{
+    --colorFondo: rgb(255, 121, 120);
+    --colorTexto: rgb(255, 255, 255);
+    --colorButton: rgb(55, 204, 138);
+    --colorPromocion: rgb(93, 84, 163);
+    --estiloLetra: 'Poppins', sans-serif;
+    --sombreado: rgb(216, 101, 104);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("./imagen/bg-intro-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--colorFondo);
+    color: var(--colorTexto);
+    font-family: var(--estiloLetra);
+    & section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        padding: 8vw;
+        & article{
+            width: 50%;
+            margin: 2%;
+            & h1{
+                font-size: 4rem;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            & .texto{
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+            & .mensaje-promocion{
+                background-color: var(--colorPromocion);
+                border-radius: 5px;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+                text-align: center;
+                padding: 2%;
+                color: rgb(222, 222, 222);
+                box-shadow: 0px 4px 1px 1px var(--sombreado);
+                & span{
+                    font-weight: bold;
+                    color: rgb(255, 255, 255);
+                }
+            }
+            & form{
+                display: flex;
+                flex-direction: column;
+                padding: 6%;
+                background-color: var(--colorTexto);
+                border-radius: 10px;
+                box-shadow: 0px 4px 1px 1px var(--sombreado);
+                & input{
+                    margin: 2%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(222, 222, 222);
+                    font-size: 1rem;
+                }
+                & button{
+                    margin: 2%;
+                    padding: 13px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(222, 222, 222);
+                    font-size: 1rem;
+                    background-color: var(--colorButton);
+                    color: var(--colorTexto);
+                    cursor: pointer;
+                }
+                & button:hover{
+                    background-color: rgb(55, 204, 138, 0.8);
+                }
+                & .texto-final{
+                    text-align: center;
+                    margin-top: 15px;
+                    color: rgb(222, 222, 222);
+                    & span{
+                        font-weight: bold;
+                        color: var(--colorFondo);
+                    }
+                }
+            }
+        }
+        @media (max-width: 768px){
+            flex-direction: column;
+            & article{
+                width: 100%;
+                & h1{
+                    font-size: 3rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.icono-error{
+    background-image: url("./imagen/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    color: var(--colorFondo);
+    border: 1px solid var(--colorFondo);
+}
+.estilos{
+    color:  var(--colorFondo);
+    text-align: right;
+    height: 24px;
+}
